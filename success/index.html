@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спасибо за покупку! — SafeWayVPN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .promo-block { background: #e0f0ff; border-radius: 16px; padding: 28px 18px; margin: 28px 0; text-align: center; color: #1a2a3a; line-height: 1.7; }
+    .promo-code { font-size: 2rem; font-weight: bold; background: #f5f7fa; border-radius: 12px; padding: 16px; margin: 18px 0; letter-spacing: 1px; color: #2186eb; box-shadow: 0 2px 8px rgba(33,134,235,0.07); }
+    .btn-copy { background: #2186eb; color: #fff; border: none; border-radius: 8px; padding: 14px 0; width: 100%; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-copy:active { background: #1761b6; }
+    .btn-tg { background: #fff; color: #2186eb; border: 2px solid #2186eb; border-radius: 8px; padding: 12px 0; width: 100%; font-size: 1.1rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-tg:hover { background: #eaf6ff; }
+    .success-icon { font-size: 2.2rem; }
+    @media (min-width: 600px) { .promo-block { padding: 36px 56px; } }
+  </style>
+</head>
+<body>
+  <main style="max-width: 480px; margin: 40px auto;">
+    <div class="glass-section" style="padding: 32px 24px; text-align: center;">
+      <div class="success-icon">❤️</div>
+      <h1 style="color: #2186eb; margin-bottom: 16px;">Спасибо за покупку!</h1>
+      <div class="promo-block">
+        <p>Благодарим вас за выбор нашего сервиса!</p>
+        <p>Количество использований ограничено!<br>Успейте воспользоваться!</p>
+        <p>Используйте специальный промокод для пополнения баланса:</p>
+        <div class="promo-code" id="promo">SafeWayPay100</div>
+        <button class="btn-copy" onclick="copyPromo()">
+          <span style="font-size:1.2em;">📋</span> Копировать промокод
+        </button>
+        <a class="btn-tg" href="https://t.me/SafeWayVPN_bot" target="_blank">
+          <span style="font-size:1.2em;">🔗</span> Перейти в Telegram бот
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function copyPromo() {
+      const promo = document.getElementById('promo').innerText;
+      navigator.clipboard.writeText(promo).then(function() {
+        alert('Промокод скопирован!');
+      });
+    }
+  </script>
+</body>
+</html> 
